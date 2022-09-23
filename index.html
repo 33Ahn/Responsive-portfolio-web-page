@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Portfolio Web Page</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      header {
+        padding: 60px;
+        text-align: center;
+        background-color: #f9fc63;
+        color: black;
+      }
+
+      .navbar {
+        display: flex;
+        /* flex-direction: row;     default value*/
+        background-color: #333;
+        justify-content: center;
+      }
+
+      .navbar a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .side {
+        flex: 30%;
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+
+      .fakeimg {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+      }
+
+      .main {
+        flex: 70%;
+        background-color: white;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Who Am I?</h1>
+    </header>
+    <div class="navbar">
+      <a href="">menu</a>
+      <a href="">menu</a>
+      <a href="">menu</a>
+      <a href="">menu</a>
+      <a href="">menu</a>
+    </div>
+    <div class="row">
+      <div class="side">
+        <div class="about">
+          <h2>About</h2>
+          <div class="fakeimg" style="height: 200px">Image</div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Repellendus, dolor.
+          </p>
+        </div>
+      </div>
+      <div class="main"></div>
+    </div>
+  </body>
+  <script></script>
+</html>
