@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
     <title>Responsive Portfolio Web Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1292de60e6.js" crossorigin="anonymous"></script>
     <style>
       * {
-        box-sizing: border-box;
+        box-sizing: border-box;        
       }
 
       html {
@@ -15,20 +17,22 @@
       }
 
       body {
-        margin: 0;
+        margin: 0; 
+        font-size: 1.2rem;                
       }
 
       header {
         padding: 60px;
-        text-align: center;
-        background-color: #f9fc63;
-        color: black;
+        text-align: center;       
+        background-image: url("./image/background_image.jpg");  
+        background-size: cover;    
+        color: #333;
       }
 
       .navbar {
         display: flex;
         /* flex-direction: row;     default value*/
-        background-color: #333;
+        background-color: #333;        
         justify-content: center;
         position: sticky;
         top: 0;
@@ -39,11 +43,12 @@
         padding: 14px 20px;
         text-decoration: none;
         text-align: center;
+        transition: all 0.5s ease;  
       }
 
       .navbar a:hover {
-        background-color: #f9fc63;
         color: #333;
+        background-color: white;        
       }
 
       .row {
@@ -53,71 +58,126 @@
       }
 
       .side {
-        flex: 30%;
-        background-color: #f1f1f1;
+        flex: 30%;       
         padding: 20px;
+      }    
+
+      .fakeimg {       
+        width: 100%;
+        /* padding: 20px; */
+        transition: 0.5s ease-out;
       }
 
-      .fakeimg {
-        background-color: #aaa;
-        width: 100%;
-        padding: 20px;
-      }
+      .fakeimg:hover {
+        box-shadow: 10px 10px 27px rgb(122, 86, 62);        
+      }      
 
       .main {
-        flex: 70%;
-        background-color: white;
+        flex: 70%;        
         padding: 20px;
       }
 
       .footer {
-        padding: 20px;
+        padding: 10px;
         text-align: center;
-        background-color: #ddd;
+        color: #333;        
+        background-image: url("./image/background_image.jpg");            
+      }
+
+      .footer > a > i {
+        font-size: 2rem;
+        padding: 0.5rem;
+        color: #333; 
+        transition: all 0.5s ease;          
+      }
+
+      .footer > a > i:hover {               
+        box-shadow: 0 10px 22px #482ff7;
       }
 
       @media screen and (max-width: 768px) {
         .row,
         .navbar {
-          flex-direction: column;
-        }
+          flex-direction: column;         
+        }        
       }
     </style>
   </head>
-  <body>
+  <body>      
     <header>
-      <h1>Who Am I?</h1>
+      <h1>I am a passionate software engineer from Las Vegas, Nevada.</h1>
     </header>
     <nav class="navbar">
-      <a href="">menu1</a>
-      <a href="">menu2</a>
-      <a href="">menu3</a>
-      <a href="">menu4</a>
-      <a href="#project5">menu5</a>
+      <a href="#project1">menu1</a>
+      <a href="#project2">menu2</a>
+      <a href="#project3">menu3</a>
+      <a href="#project4">menu4</a>
+      <a href="#project5">menu5</a>      
     </nav>
+   
     <div class="row">
       <aside class="side">
         <div class="about">
           <h2>About</h2>
-          <div class="fakeimg" style="height: 200px">Image</div>
+          <div class="fakeimg" style="height: 200px"><img src="./image/jk.JPG" alt="drawing of a smiling boy" style="object-fit: contain; width: 100%; height: 200px;"/></div>           
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Repellendus, dolor.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt molestiae est rem repudiandae amet vel expedita modi facilis ipsum sit magnam, doloribus cupiditate!
           </p>
           <h3>Skills</h3>
           <p>JavaScript, HTML, CSS, React, Angular, Java, Database</p>
-          <div class="fakeimg" style="height: 60px">Image</div>
+          <div class="fakeimg" style="height: 60px">
+            <img src="./image/angular.svg" alt="logo" style="height: 60px">
+            <img src="./image/java.svg" alt="logo" style="height: 60px">
+            <img src="./image/html5.svg" alt="logo" style="height: 60px">
+            <img src="./image/css3.svg" alt="logo" style="height: 60px">
+            <img src="./image/js.svg" alt="logo" style="height: 60px">          
+            <img src="./image/node.svg" alt="logo" style="height: 60px">          
+          </div>
+          <!-- <br /> 
+          <div class="fakeimg" style="height: 60px"></div>
           <br />
-          <div class="fakeimg" style="height: 60px">Image</div>
-          <br />
-          <div class="fakeimg" style="height: 60px">Image</div>
-        </div>
+          <div class="fakeimg" style="height: 60px"></div> -->
+          <h3>Education</h3>
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quas.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis?</li>
+            </ul>
+          <h3>Experience</h3>         
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur.
+                <ul>
+                  <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, quae.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae ullam pariatur fugit?</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+              </li>
+              <br>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <ul>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, voluptates.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est!</li>
+                </ul>
+              </li>              
+            </ul>
+        </div>        
       </aside>
-      <main class="main">
+      <main class="main">                            
         <section>
-          <h2>Project 1</h2>
-          <h5>September 2022</h5>
-          <div class="fakeimg" style="height: 200px">Image</div>
+          <h2 id="project1">Project 1</h2>
+          <h4>September 2022</h4>
+          <div class="fakeimg"><img src="./image/room.jpg" alt="a room with windows and blue sky" style="object-fit: cover; width: 100%; height: 200px;" ></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores
+            soluta minima voluptatem? Repudiandae mollitia natus unde libero
+            sunt officiis fugiat?
+          </p>
+        </section> 
+        <section>
+          <h2 id="project2">Project 2</h2>
+          <h4>September 2022</h4>
+          <div class="fakeimg" style="height: 200px"><img src="./image/bedroom.jpg" alt="a bedroom with white bedding" style="object-fit: cover; width: 100%; height: 200px;"></div>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores
             soluta minima voluptatem? Repudiandae mollitia natus unde libero
@@ -125,9 +185,9 @@
           </p>
         </section>
         <section>
-          <h2>Project 2</h2>
-          <h5>September 2022</h5>
-          <div class="fakeimg" style="height: 200px">Image</div>
+          <h2 id="project3">Project 3</h2>
+          <h4>September 2022</h4>
+          <div class="fakeimg" style="height: 200px"><img src="./image/cafe.jpg" alt="outdoorish cafe" style="object-fit: cover; width: 100%; height: 200px;"></div>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores
             soluta minima voluptatem? Repudiandae mollitia natus unde libero
@@ -135,19 +195,9 @@
           </p>
         </section>
         <section>
-          <h2>Project 3</h2>
-          <h5>September 2022</h5>
-          <div class="fakeimg" style="height: 200px">Image</div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores
-            soluta minima voluptatem? Repudiandae mollitia natus unde libero
-            sunt officiis fugiat?
-          </p>
-        </section>
-        <section>
-          <h2>Project 4</h2>
-          <h5>September 2022</h5>
-          <div class="fakeimg" style="height: 200px">Image</div>
+          <h2 id="project4">Project 4</h2>
+          <h4>September 2022</h4>
+          <div class="fakeimg" style="height: 200px"><img src="./image/two-chairs.jpg" alt="two grey chairs" style="object-fit: cover; width: 100%; height: 200px;"></div>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores
             soluta minima voluptatem? Repudiandae mollitia natus unde libero
@@ -156,8 +206,8 @@
         </section>
         <section id="project5">
           <h2>Project 5</h2>
-          <h5>September 2022</h5>
-          <div class="fakeimg" style="height: 200px">Image</div>
+          <h4>September 2022</h4>
+          <div class="fakeimg" style="height: 200px"><img src="./image/lounge.jpg" alt="wooden poles inside of a building" style="object-fit: cover; width: 100%; height: 200px;"></div>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores
             soluta minima voluptatem? Repudiandae mollitia natus unde libero
@@ -167,7 +217,9 @@
       </main>
     </div>
     <footer class="footer">
-      <h2>Copyright AhnShields 2022</h2>
+      <h2>&copy; Copyright Ahn Shields 2022</h2>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-github"></i></a>
     </footer>
   </body>
 </html>
